@@ -1,0 +1,43 @@
+# NLI diagnostic pairs (added 2026-10-26, AFTER the main run, to measure a suspected bias; committed
+# BEFORE scoring). DRAFT FOR EXPERT VETTING: change or drop any pair, then commit, then run.
+#
+# Each pair makes two COMPATIBLE claims about DIFFERENT aspects of the same construct. Both can be
+# true at once, so a well-calibrated NLI model should label them neutral (or entailment), not
+# contradiction. The share labeled "contradiction" estimates how often the measures mistake
+# difference of aspect for disagreement.
+#
+# PREDICTION (written before scoring): if the bias suspected from the noise floor (conflict ratio
+# 0.65 within repeated readings) is real, a substantial share of these pairs will be labeled
+# contradiction.
+
+pairs:
+  - {id: C1, type: compatible, construct: legitimacy,
+     a: "Legitimacy is a perception that audiences hold about an organization.",
+     b: "Legitimacy is acquired through a process of conforming to institutional expectations."}
+  - {id: C2, type: compatible, construct: legitimacy,
+     a: "Legitimacy gives organizations access to resources.",
+     b: "Legitimacy is conferred by multiple audiences."}
+  - {id: C3, type: compatible, construct: legitimacy,
+     a: "Legitimacy is a generalized perception that an organization's actions are appropriate.",
+     b: "Organizations can manage their legitimacy strategically."}
+  - {id: C4, type: compatible, construct: legitimacy,
+     a: "Cognitive legitimacy rests on an organization being taken for granted.",
+     b: "Pragmatic legitimacy rests on audiences' self-interested calculations."}
+  - {id: C5, type: compatible, construct: legitimacy,
+     a: "New ventures must build legitimacy to survive.",
+     b: "Legitimacy judgments are formed at both individual and collective levels."}
+  - {id: C6, type: compatible, construct: governance,
+     a: "Governance structures differ in how they resolve disputes.",
+     b: "The choice of governance structure depends on how frequently a transaction recurs."}
+  - {id: C7, type: compatible, construct: governance,
+     a: "Hierarchies use authority to coordinate exchange.",
+     b: "Markets provide strong incentives through prices."}
+  - {id: C8, type: compatible, construct: governance,
+     a: "Asset specificity creates a risk of hold-up.",
+     b: "Bounded rationality limits how complete contracts can be."}
+  - {id: C9, type: compatible, construct: governance,
+     a: "Trust can reduce the costs of governing an exchange.",
+     b: "Formal contracts specify the obligations of exchange partners."}
+  - {id: C10, type: compatible, construct: governance,
+     a: "Hybrid forms combine features of markets and hierarchies.",
+     b: "Transaction cost economics treats the transaction as the unit of analysis."}

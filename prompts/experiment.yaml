@@ -1,0 +1,58 @@
+# DCR experiment configuration. FROZEN on commit (target: 2026-10-25), before any reading runs.
+# Changes after the freeze go in CHANGELOG with a reason; never edit silently.
+version: 1
+
+models:
+  readers:    {provider: anthropic, model: claude-sonnet-5-5, temperature: 1.0, max_tokens: 4000}
+  extraction: {provider: anthropic, model: claude-sonnet-5-5, temperature: 0.0, max_tokens: 2000}
+  editors:    {provider: anthropic, model: claude-sonnet-5-5, temperature: 1.0, max_tokens: 8000}
+  replication:                       # one full council on an open-weights model
+    provider: TBD                    # e.g., Together or OpenRouter, or local
+    model: TBD                       # 70B-class instruction model; record the exact checkpoint
+    temperature: 1.0
+  embeddings: TBD                    # e.g., BAAI/bge-large-en-v1.5 via sentence-transformers
+  nli: TBD                           # DeBERTa-large MNLI checkpoint from HuggingFace; record exact name
+
+# The construct each reader reads for. Single terms, same instruction for every corpus.
+# TCE uses "governance": the term at the center of TCE and the term the splice set uses in a
+# different (corporate-governance) sense, which is what the manipulation check requires.
+corpora:
+  legitimacy:  {documents: [corpus/legitimacy_selected.csv], construct: legitimacy}
+  tce:         {documents: [corpus/tce_selected.csv], construct: governance}
+  tce_spliced: {documents: [corpus/tce_selected.csv, corpus/splice_selected.csv], construct: governance}
+
+readers:
+  real: [structural, operational, genealogical]
+  sham: [structural_sham_plain, structural_sham_formal]   # same epistemology as structural, different voice
+
+editors: [synthesizing, adversarial]
+
+runs:
+  # Readings are per document and independent, so tce_spliced reuses the tce and splice readings.
+  reading:
+    real:  {documents: [legitimacy, tce, splice], repetitions: 5}       # 47 docs x 3 readers x 5
+    sham:  {documents: [legitimacy, tce], repetitions: 5}                # 42 docs x 2 shams x 5
+  extraction: every reader output, once (temperature 0)
+  editing:
+    main:  {corpora: [legitimacy, tce, tce_spliced], editors: [synthesizing, adversarial],
+            reader_repetitions: [1, 2, 3, 4, 5]}                         # 30 editor runs
+    editor_noise_floor: {corpora: [legitimacy, tce], editors: [synthesizing, adversarial],
+                         reader_repetition: 1, repetitions: 3}
+  replication:
+    corpus: legitimacy
+    readers: real
+    repetitions: 3
+    editors: [synthesizing]
+
+measures:
+  unit: characterization claims (stance tracked separately, never counted as incoherence)
+  cosine: pairwise similarity of claim embeddings
+  nli: entailment / contradiction / neutral between claims about the same document, and across documents
+  noise_floor: within-reader dispersion across repetitions
+  comparisons:
+    - real readers vs noise floor
+    - sham pair vs real reader pairs
+    - tce vs tce_spliced (manipulation check)
+    - legitimacy vs tce
+    - primary vs replication model (legitimacy)
+    - stability vs co-citation structure

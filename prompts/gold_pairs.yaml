@@ -1,0 +1,58 @@
+# Gold claim pairs for the measurement sanity check (run before any reading runs).
+# DRAFT FOR EXPERT VETTING. Change, drop, or add pairs, then commit. Your vetting is what makes
+# these expert-labeled. Constructed propositions, not quotations.
+#   opposed:    theoretically incompatible but similar wording  (cosine should be fooled; NLI should not)
+#   equivalent: theoretically equivalent but different wording (cosine may miss; NLI should entail)
+# Pass condition: each measure separates the two groups (report effect sizes, not just yes/no).
+
+pairs:
+  # --- opposed, similar wording ---
+  - {id: O1, type: opposed, construct: legitimacy,
+     a: "Legitimacy is conferred when organizations conform to the expectations of their institutional environment.",
+     b: "Legitimacy is acquired when organizations strategically manipulate the expectations of their institutional environment."}
+  - {id: O2, type: opposed, construct: legitimacy,
+     a: "Legitimacy is a property an organization possesses independently of how audiences perceive it.",
+     b: "Legitimacy exists only in audiences' perceptions of an organization."}
+  - {id: O3, type: opposed, construct: legitimacy,
+     a: "Cognitive legitimacy rests on an organization being taken for granted.",
+     b: "Cognitive legitimacy rests on an organization being actively evaluated and approved."}
+  # O4 dropped in vetting: individual judgments and collective consensus are compatible
+  #   as levels of one process (cf. Bitektine & Haack 2015); not a clean opposition.
+  - {id: O5, type: opposed, construct: governance,
+     a: "Greater asset specificity makes hierarchical governance more efficient than market governance.",
+     b: "Greater asset specificity makes hierarchical governance less efficient than market governance."}
+  - {id: O6, type: opposed, construct: governance,
+     a: "Opportunism is a feature of human nature that governance structures must guard against.",
+     b: "Opportunism is a product of governance structures that treat exchange partners as untrustworthy."}
+  - {id: O7, type: opposed, construct: governance,
+     a: "Trust substitutes for formal contractual safeguards in governing exchanges.",
+     b: "Trust complements formal contractual safeguards in governing exchanges."}
+  - {id: O8, type: opposed, construct: governance,
+     a: "Hybrid governance forms are unstable, transitional arrangements between market and hierarchy.",
+     b: "Hybrid governance forms are stable, distinct arrangements between market and hierarchy."}
+
+  # --- equivalent, different wording ---
+  - {id: E1, type: equivalent, construct: legitimacy,
+     a: "Legitimacy is a generalized perception that an organization's actions are desirable and appropriate within a socially constructed system of norms.",
+     b: "An organization counts as legitimate when audiences broadly see what it does as fitting prevailing social rules and values."}
+  - {id: E2, type: equivalent, construct: legitimacy,
+     a: "Organizations gain legitimacy by adopting practices widely accepted in their field.",
+     b: "Firms win acceptance by copying the structures their peers treat as standard."}
+  - {id: E3, type: equivalent, construct: legitimacy,
+     a: "New ventures lack legitimacy, which limits their access to resources.",
+     b: "Young firms struggle to obtain capital because audiences do not yet regard them as credible."}
+  - {id: E4, type: equivalent, construct: legitimacy,
+     a: "Legitimacy judgments are made by audiences who evaluate organizations.",
+     b: "Whether an organization is legitimate depends on how its observers assess it."}
+  - {id: E5, type: equivalent, construct: governance,
+     a: "Firms choose governance structures that minimize the costs of transacting.",
+     b: "Companies organize exchanges in whatever way economizes on the expense of making and enforcing deals."}
+  - {id: E6, type: equivalent, construct: governance,
+     a: "When assets are highly specific to a relationship, firms tend to integrate vertically.",
+     b: "Investments useful only within one particular partnership push companies to bring the activity in-house."}
+  - {id: E7, type: equivalent, construct: governance,
+     a: "Bounded rationality makes complete contracts impossible.",
+     b: "Because people cannot foresee every contingency, agreements always leave gaps."}
+  - {id: E8, type: equivalent, construct: governance,
+     a: "Markets govern transactions through prices, and hierarchies govern them through authority.",
+     b: "Exchanges are coordinated by price signals in markets and by managerial command inside firms."}

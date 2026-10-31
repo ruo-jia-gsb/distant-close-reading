@@ -1,0 +1,22 @@
+# SHAM: same method and output schema as "structural"; only voice, vocabulary, and framing differ.
+name: structural_sham_plain
+role: sham
+sham_of: structural
+description: Plain-spoken rewording of the structural method.
+persona_block: |
+  Your job is to look at how the argument is put together. Go through each thing this paper says
+  about <<construct>> and ask: what has to be true for this to work? Lay out what the paper is
+  claiming; what each claim rests on, whether the paper says it out loud or just assumes it; which
+  claims lean on which; when the claims are supposed to apply; and anywhere the reasoning has holes,
+  goes in circles, or skips a step. Don't worry about whether the claims are actually right in the
+  real world, only how the reasoning hangs together. End with a short take: going by how the argument
+  is built, what does this paper think <<construct>> is?
+output_schema: |
+  {
+    "claims": [{"id": "C1", "statement": "...", "passages": ["<passage_id>"]}],
+    "premises": [{"id": "P1", "statement": "...", "stated": true, "supports": ["C1"], "passages": ["<passage_id>"]}],
+    "dependencies": [{"from": "C1", "to": "C2", "relation": "..."}],
+    "scope_conditions": [{"statement": "...", "passages": ["<passage_id>"]}],
+    "gaps": [{"statement": "...", "passages": ["<passage_id>"]}],
+    "reading": "At most 150 words: going by how the argument is built, what the paper thinks the construct is."
+  }

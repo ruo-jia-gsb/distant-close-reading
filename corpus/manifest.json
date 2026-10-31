@@ -1,0 +1,117 @@
+{
+  "run_utc": "2026-10-23T01:04:05+00:00",
+  "source": "OpenAlex API",
+  "script_sha256": "c68d930460b17533d1a312a55b7061b90a4f293c8f8c31a37c25be5f8a1cfd30",
+  "rank_by": "total",
+  "max_per_anchor": 1000,
+  "journals": {
+    "Academy of Management Review": "0363-7425",
+    "Academy of Management Journal": "0001-4273",
+    "Administrative Science Quarterly": "0001-8392",
+    "Organization Science": "1047-7039",
+    "Strategic Management Journal": "0143-2095",
+    "Journal of Management Studies": "0022-2380"
+  },
+  "anchors_only": false,
+  "corpora": {
+    "legitimacy": {
+      "rule": "[legitimacy] Articles in Academy of Management Review, Academy of Management Journal, Administrative Science Quarterly, Organization Science, Strategic Management Journal, Journal of Management Studies that cite Suchman 1995, Deephouse & Suchman 2008, Suddaby, Bitektine & Haack 2017, contain \"legitimacy\" in the title or abstract, ranked by total citation count in OpenAlex; the top 20 are selected. Anchor works (Suchman 1995, Deephouse & Suchman 2008, Suddaby, Bitektine & Haack 2017) are added to the corpus.",
+      "anchors": [
+        {
+          "label": "Suchman 1995",
+          "method": "openalex_id",
+          "openalex_id": "W2162412465",
+          "matched_title": "Managing Legitimacy: Strategic and Institutional Approaches",
+          "year": 1995,
+          "cited_by_count": 19807,
+          "extra_ids": []
+        },
+        {
+          "label": "Deephouse & Suchman 2008",
+          "method": "openalex_id",
+          "openalex_id": "W2496218594",
+          "matched_title": "Legitimacy in Organizational Institutionalism",
+          "year": 2008,
+          "cited_by_count": 1604,
+          "extra_ids": []
+        },
+        {
+          "label": "Suddaby, Bitektine & Haack 2017",
+          "method": "openalex_id",
+          "openalex_id": "W4240547422",
+          "matched_title": "Legitimacy",
+          "year": 2017,
+          "cited_by_count": 1093,
+          "extra_ids": []
+        }
+      ],
+      "unique_citing": 511,
+      "passing_rule": 181,
+      "selected": 23,
+      "selected_missing_abstract": 0
+    },
+    "tce": {
+      "rule": "[tce] Articles in Academy of Management Review, Academy of Management Journal, Administrative Science Quarterly, Organization Science, Strategic Management Journal, Journal of Management Studies that cite Williamson 1975, Williamson 1981, Williamson 1985, Williamson 1991, contain \"transaction cost\" OR \"make-or-buy\" OR \"make or buy\" in the title or abstract, ranked by total citation count in OpenAlex; the top 15 are selected. Anchor works (Williamson 1975, Williamson 1981, Williamson 1985, Williamson 1991) are added to the corpus.",
+      "anchors": [
+        {
+          "label": "Williamson 1975",
+          "method": "openalex_id",
+          "openalex_id": "W1973308529",
+          "matched_title": "Markets and Hierarchies: Analysis and Antitrust Implications.",
+          "year": 1976,
+          "cited_by_count": 13381,
+          "extra_ids": []
+        },
+        {
+          "label": "Williamson 1981",
+          "method": "openalex_id",
+          "openalex_id": "W1972698480",
+          "matched_title": "The Economics of Organization: The Transaction Cost Approach",
+          "year": 1981,
+          "cited_by_count": 6450,
+          "extra_ids": []
+        },
+        {
+          "label": "Williamson 1985",
+          "method": "openalex_id",
+          "openalex_id": "W1684540946",
+          "matched_title": "The Economic Institutions of Capitalism",
+          "year": 1986,
+          "cited_by_count": 10730,
+          "extra_ids": []
+        },
+        {
+          "label": "Williamson 1991",
+          "method": "openalex_id",
+          "openalex_id": "W2109280325",
+          "matched_title": "Comparative Economic Organization: The Analysis of Discrete Structural Alternatives",
+          "year": 1991,
+          "cited_by_count": 7147,
+          "extra_ids": []
+        }
+      ],
+      "unique_citing": 1136,
+      "passing_rule": 172,
+      "selected": 19,
+      "selected_missing_abstract": 0
+    },
+    "splice": {
+      "rule": "[splice] Articles in Academy of Management Review, Academy of Management Journal, Administrative Science Quarterly, Organization Science, Strategic Management Journal, Journal of Management Studies that cite Jensen & Meckling 1976, contain \"corporate governance\" OR \"board of directors\" OR \"boards of directors\" in the title or abstract and none of \"transaction cost\", ranked by total citation count in OpenAlex; the top 5 are selected.",
+      "anchors": [
+        {
+          "label": "Jensen & Meckling 1976",
+          "method": "openalex_id",
+          "openalex_id": "W2752617332",
+          "matched_title": "Theory of the firm: Managerial behavior, agency costs and ownership structure",
+          "year": 1976,
+          "cited_by_count": 71370,
+          "extra_ids": []
+        }
+      ],
+      "unique_citing": 804,
+      "passing_rule": 140,
+      "selected": 5,
+      "selected_missing_abstract": 0
+    }
+  }
+}

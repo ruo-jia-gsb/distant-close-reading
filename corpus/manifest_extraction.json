@@ -1,0 +1,538 @@
+{
+  "run_utc": "2026-10-26T18:16:11+00:00",
+  "script_sha256": "076080d8b30689de4900a360298a17821215b0ba008ce1f7c20608fcd9fed2e5",
+  "pymupdf_version": "2.0",
+  "rule": {
+    "min_words": 40,
+    "max_passages_per_doc": 8,
+    "terms": {
+      "legitimacy": [
+        "legitim\\w*"
+      ],
+      "tce": [
+        "transaction[- ]cost\\w*",
+        "asset specificit\\w*",
+        "specific assets?",
+        "opportunis\\w*",
+        "bounded(ly)? rational\\w*",
+        "governance",
+        "hierarch\\w*",
+        "make[- ]or[- ]buy",
+        "vertical(ly)? integrat\\w*",
+        "hybrid\\w*"
+      ],
+      "splice": [
+        "transaction[- ]cost\\w*",
+        "asset specificit\\w*",
+        "specific assets?",
+        "opportunis\\w*",
+        "bounded(ly)? rational\\w*",
+        "governance",
+        "hierarch\\w*",
+        "make[- ]or[- ]buy",
+        "vertical(ly)? integrat\\w*",
+        "hybrid\\w*"
+      ]
+    },
+    "reference_heading": "^\\s*(references|bibliography|literature cited|works cited)\\s*$",
+    "book_rule": "Book-length anchors: preface/introduction plus Chapter 1 only.",
+    "book_excerpts": {
+      "W1973308529": {
+        "title": "Markets and Hierarchies (1975)",
+        "start": "This book is concerned with the organization of economic activity",
+        "end": "A more complete statement of the organizational failures framework",
+        "already_excerpt": false
+      },
+      "W1684540946": {
+        "title": "The Economic Institutions of Capitalism (1985)",
+        "start": "What is referred to herein as transaction cost economics",
+        "end": "Complex systems are usefully studied from several points of view",
+        "already_excerpt": false
+      }
+    }
+  },
+  "documents": {
+    "W2110649000": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 122875,
+      "blocks": 530,
+      "body_blocks": 347,
+      "candidates": 42,
+      "selected": 8,
+      "text_sha256": "16e821bf9b406325000caf8473b187148a54a7d482cec01ac36e7777bfced441"
+    },
+    "W2088508036": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 79309,
+      "blocks": 296,
+      "body_blocks": 156,
+      "candidates": 71,
+      "selected": 8,
+      "text_sha256": "8ff9056810a899dcb573fa434fe2883b662b5d4325602a0f9b358f4202bc22c7"
+    },
+    "W2122311065": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 82117,
+      "blocks": 418,
+      "body_blocks": 268,
+      "candidates": 66,
+      "selected": 8,
+      "text_sha256": "bd4b4bdbe963233c5d0103a10727430088bc41aae552385a4ced3d2fdc238b11"
+    },
+    "W2073766519": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 90839,
+      "blocks": 293,
+      "body_blocks": 173,
+      "candidates": 46,
+      "selected": 8,
+      "text_sha256": "c3aa517d2c5ade39e2616bb5885b3a4bc2da1408984c41ce9bc96025ac7559db"
+    },
+    "W2110415574": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 120238,
+      "blocks": 565,
+      "body_blocks": 565,
+      "candidates": 27,
+      "selected": 8,
+      "text_sha256": "b71034bd77482e6b3e841fe092092a733f4878fbd6158ecd6cef258f11110dd3"
+    },
+    "W2134995742": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 80411,
+      "blocks": 548,
+      "body_blocks": 364,
+      "candidates": 15,
+      "selected": 8,
+      "text_sha256": "7af082fee5c9f019406de51b30ceacd9452b88278ab098960a5fa03e3b25e772"
+    },
+    "W2056225081": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 46447,
+      "blocks": 205,
+      "body_blocks": 136,
+      "candidates": 33,
+      "selected": 8,
+      "text_sha256": "14e76014253aa62bfc48efd0a236c27330835b8fc3638cb9a0a044ac5ac64e66"
+    },
+    "W1971805457": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 44938,
+      "blocks": 285,
+      "body_blocks": 285,
+      "candidates": 22,
+      "selected": 8,
+      "text_sha256": "a488cdacb2c5a18f9a9b35006a5f3ac4b02ea51659b8bdded4852c89e0e2d0ea"
+    },
+    "W2223562046": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 118968,
+      "blocks": 666,
+      "body_blocks": 422,
+      "candidates": 76,
+      "selected": 8,
+      "text_sha256": "bc72d11d02112a3904b56ad1bb39b0c23e97234fbe1ef97879a8375f44d7ecb4"
+    },
+    "W2109929071": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 91627,
+      "blocks": 339,
+      "body_blocks": 194,
+      "candidates": 31,
+      "selected": 8,
+      "text_sha256": "d4e8ee9646ab932085fb27156f8280e484b020fb55faad3e4b06d80e2aa0b60c"
+    },
+    "W2019422872": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 99036,
+      "blocks": 362,
+      "body_blocks": 240,
+      "candidates": 68,
+      "selected": 8,
+      "text_sha256": "1dc1bae86dd87f9e34f68a61dc3fc3fbe4c9da9e1029039daff19df46eb8a94c"
+    },
+    "W2041499464": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 97238,
+      "blocks": 523,
+      "body_blocks": 338,
+      "candidates": 11,
+      "selected": 8,
+      "text_sha256": "075e61e66061eca88eab707248b9acaabff2c939b1c4077c9e09eaddbf5c837f"
+    },
+    "W2017707396": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 105987,
+      "blocks": 459,
+      "body_blocks": 318,
+      "candidates": 81,
+      "selected": 8,
+      "text_sha256": "756bfe1a2196de1d6bf676f056a5f9ee88a1a8ef04657a852a1789a0857787fb"
+    },
+    "W2073260340": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 56141,
+      "blocks": 247,
+      "body_blocks": 130,
+      "candidates": 19,
+      "selected": 8,
+      "text_sha256": "e0903fc6ac8fcd5ba489463c4551399cb0c73cd095362e765e35d081ea2c442c"
+    },
+    "W2148222547": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 126709,
+      "blocks": 658,
+      "body_blocks": 563,
+      "candidates": 24,
+      "selected": 8,
+      "text_sha256": "3c7ce0108226f7783fddc32d03ba2bf2188d7b943d5084fc8508ea0b0441c308"
+    },
+    "W2144706451": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 125850,
+      "blocks": 750,
+      "body_blocks": 419,
+      "candidates": 58,
+      "selected": 8,
+      "text_sha256": "94e7ae5bbfd3623b8f6792621719e6b69969c0032736acbff831be52a4706a87"
+    },
+    "W2091806695": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 110502,
+      "blocks": 622,
+      "body_blocks": 461,
+      "candidates": 37,
+      "selected": 8,
+      "text_sha256": "44caba6d061ad8d72e0c8856b2fdbfd22a6975e22670d7a8c5efa9b19d983588"
+    },
+    "W2054383752": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 87201,
+      "blocks": 394,
+      "body_blocks": 286,
+      "candidates": 60,
+      "selected": 8,
+      "text_sha256": "dc814724dc433f01ea9f97d8e9ec0c89cfbcf56a1355e09635e6a15f95551a3d"
+    },
+    "W2886812813": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 70828,
+      "blocks": 219,
+      "body_blocks": 169,
+      "candidates": 22,
+      "selected": 8,
+      "text_sha256": "6da6cc20563687a7bccb890cbd077d971a82c9671bfec8de66130e405429f6af"
+    },
+    "W2012899096": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 64007,
+      "blocks": 293,
+      "body_blocks": 293,
+      "candidates": 29,
+      "selected": 8,
+      "text_sha256": "22ef38fc9f8afdb597c9a91ff8c7002a3cf2df440a01d1be5565c6d5f9ce1b73"
+    },
+    "W2162412465": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 127821,
+      "blocks": 474,
+      "body_blocks": 277,
+      "candidates": 94,
+      "selected": 8,
+      "text_sha256": "a8ae862a839350fb727b715214599e3ff42dc0132129556c09789c8d9c81a29d"
+    },
+    "W2496218594": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 114197,
+      "blocks": 408,
+      "body_blocks": 227,
+      "candidates": 83,
+      "selected": 8,
+      "text_sha256": "73c4a5fa5279696fa206d6a02cca72d1d293273a838643e820cfbacbf8a2044a"
+    },
+    "W4240547422": {
+      "corpus": "legitimacy",
+      "source": "pdf",
+      "chars": 143244,
+      "blocks": 727,
+      "body_blocks": 727,
+      "candidates": 113,
+      "selected": 8,
+      "text_sha256": "58a8d77573106c1d55e85d82b74e52056ab02a2cfe81d954440439c6a096ae4a"
+    },
+    "W1966565904": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 84759,
+      "blocks": 529,
+      "body_blocks": 363,
+      "candidates": 39,
+      "selected": 8,
+      "text_sha256": "7547f99e8bd1373f032bb98f9ff0790d3867c76a3dd20ba684e9721f770a4709"
+    },
+    "W1983272981": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 91515,
+      "blocks": 382,
+      "body_blocks": 220,
+      "candidates": 23,
+      "selected": 8,
+      "text_sha256": "f263010546ab3bd894cd57fe1d8424a82cb5e9a27b73864d485caa19343cd7a3"
+    },
+    "W2042008766": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 63585,
+      "blocks": 370,
+      "body_blocks": 277,
+      "candidates": 20,
+      "selected": 8,
+      "text_sha256": "cee904cc078ed854d94b21ad80347ca7d61318c9eabf0346aafb1eb97129cef1"
+    },
+    "W2037445371": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 87391,
+      "blocks": 398,
+      "body_blocks": 398,
+      "candidates": 10,
+      "selected": 8,
+      "text_sha256": "be42a3dc49ee1a324baee561ba62a03ffa70aab413b9b7bc1c5efab8800f90b0"
+    },
+    "W2025001207": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 76277,
+      "blocks": 326,
+      "body_blocks": 326,
+      "candidates": 10,
+      "selected": 8,
+      "text_sha256": "8c728dcd6bb753ea7f44cbc82d77f3fce1d4fd2a84b02bcaf315754f411e2da0"
+    },
+    "W2056239166": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 106893,
+      "blocks": 505,
+      "body_blocks": 505,
+      "candidates": 57,
+      "selected": 8,
+      "text_sha256": "abfbd3a35054504a0ff91426df410f6713ae71b314973dabd27be01e1136a756"
+    },
+    "W2021840847": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 108641,
+      "blocks": 460,
+      "body_blocks": 260,
+      "candidates": 68,
+      "selected": 8,
+      "text_sha256": "9a29e49fad2fc56c0ed98ad8b131be5002cbe2fb5760d01983fc3bc2a41f889d"
+    },
+    "W2036333055": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 59886,
+      "blocks": 375,
+      "body_blocks": 340,
+      "candidates": 21,
+      "selected": 8,
+      "text_sha256": "b55d631d259e93ab985ec3c87ac5c77271863f9dad9e0ec81c0aefaeb44cb4a5"
+    },
+    "W2124687760": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 85365,
+      "blocks": 162,
+      "body_blocks": 162,
+      "candidates": 43,
+      "selected": 8,
+      "text_sha256": "fa75efcf8228e486ab791378b6a6d6012fa5f2028872fe2d4a14d0615581b3a0"
+    },
+    "W2097273566": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 101503,
+      "blocks": 369,
+      "body_blocks": 281,
+      "candidates": 80,
+      "selected": 8,
+      "text_sha256": "8a57f47f95f37c2f018ff7dc65e051ffe07f69f53f6935cce8237d278fdceadd"
+    },
+    "W2124927217": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 80671,
+      "blocks": 1015,
+      "body_blocks": 927,
+      "candidates": 50,
+      "selected": 8,
+      "text_sha256": "4c39a62419dcf92f7f512df2767da98e272c39c8d25e274253366e8da2aa2f3f"
+    },
+    "W2014435970": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 63257,
+      "blocks": 253,
+      "body_blocks": 253,
+      "candidates": 37,
+      "selected": 8,
+      "text_sha256": "89d387e943396f65027396df9291efed0f92424a004f2b791045408e9b3a7a53"
+    },
+    "W1980934528": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 122755,
+      "blocks": 449,
+      "body_blocks": 334,
+      "candidates": 4,
+      "selected": 4,
+      "text_sha256": "063e06a88c6079814e2319101a061f6e27d70de59091e49d88b3c3bcedc88949"
+    },
+    "W2006722299": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 86358,
+      "blocks": 328,
+      "body_blocks": 328,
+      "candidates": 63,
+      "selected": 8,
+      "text_sha256": "5a2a7eb89c213352d679b0547d86d8d4367e3a8452490ad150bf8058a8c80d42"
+    },
+    "W2024485756": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 76228,
+      "blocks": 165,
+      "body_blocks": 165,
+      "candidates": 45,
+      "selected": 8,
+      "text_sha256": "8ae32062b10d34ef8805c3bbfe404ad232388eea4ac54011e04475004d016a4b"
+    },
+    "W1973308529": {
+      "corpus": "tce",
+      "source": "txt",
+      "chars": 830718,
+      "blocks": 14,
+      "body_blocks": 14,
+      "candidates": 12,
+      "selected": 8,
+      "text_sha256": "ec4aaadc6d8b135afc55768f9fecc8cd56e536f6121423b9227f55d192e6ccc0",
+      "excerpt_chars": 31756,
+      "excerpt_markers": {
+        "start": "This book is concerned with the organization of economic activity",
+        "end": "A more complete statement of the organizational failures framework",
+        "already_excerpt": false
+      }
+    },
+    "W1972698480": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 88307,
+      "blocks": 280,
+      "body_blocks": 221,
+      "candidates": 53,
+      "selected": 8,
+      "text_sha256": "25624a04ab7ee0bce68987b0421d39d4c0496dd0299f07f39cacbdfee167eb7e"
+    },
+    "W1684540946": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 1226491,
+      "blocks": 403,
+      "body_blocks": 403,
+      "candidates": 97,
+      "selected": 8,
+      "text_sha256": "56c11ab66e2663a68c956793d9e1ef7e0c029bb5123d394407c8139557ab3b13",
+      "excerpt_chars": 118338,
+      "excerpt_markers": {
+        "start": "What is referred to herein as transaction cost economics",
+        "end": "Complex systems are usefully studied from several points of view",
+        "already_excerpt": false
+      }
+    },
+    "W2109280325": {
+      "corpus": "tce",
+      "source": "pdf",
+      "chars": 96688,
+      "blocks": 463,
+      "body_blocks": 354,
+      "candidates": 65,
+      "selected": 8,
+      "text_sha256": "e0593921e4c37e8633a991b244125dd196ddb433f8ca9f2f9c87901202cd293e"
+    },
+    "W2117482595": {
+      "corpus": "splice",
+      "source": "pdf",
+      "chars": 64637,
+      "blocks": 322,
+      "body_blocks": 178,
+      "candidates": 4,
+      "selected": 4,
+      "text_sha256": "30d7abfd3fe393af44e40c84318085f086c637040c5845bc43ada4e8375d56fa"
+    },
+    "W2135145155": {
+      "corpus": "splice",
+      "source": "pdf",
+      "chars": 56623,
+      "blocks": 295,
+      "body_blocks": 295,
+      "candidates": 45,
+      "selected": 8,
+      "text_sha256": "3b4354951941349acb2b5b4c13f519384158e521178f90473cf653f29f92f1f8"
+    },
+    "W1910832905": {
+      "corpus": "splice",
+      "source": "pdf",
+      "chars": 89002,
+      "blocks": 341,
+      "body_blocks": 214,
+      "candidates": 37,
+      "selected": 8,
+      "text_sha256": "7ebc3782edceaa6dc3f4b51d2beee9b3ee5b8699d5d00db3b5af083d62df75f4"
+    },
+    "W2002628276": {
+      "corpus": "splice",
+      "source": "pdf",
+      "chars": 64582,
+      "blocks": 394,
+      "body_blocks": 394,
+      "candidates": 9,
+      "selected": 8,
+      "text_sha256": "f2ce98d5a01bef85079327f6c46468a15eaa4dacf0a5c6c81baec09bff96955a"
+    },
+    "W2110482623": {
+      "corpus": "splice",
+      "source": "pdf",
+      "chars": 88803,
+      "blocks": 465,
+      "body_blocks": 258,
+      "candidates": 32,
+      "selected": 8,
+      "text_sha256": "d5c39c061ef64c77e63a7f947283254c7395191ac0df9cb3d6a31c89e59c5da5"
+    }
+  }
+}

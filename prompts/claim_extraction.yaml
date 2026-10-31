@@ -1,0 +1,55 @@
+# Converts one reader's output for one document into short standalone claims for measurement.
+# Same prompt for every reader. Temperature 0. Placeholders: <<construct>> <<document>> <<reader_output>>
+name: claim_extraction
+system: |
+  You convert one reader's structured reading of a scholarly document into short, standalone claims
+  so that readings by different readers can be compared. You report only what the reading says.
+  You add nothing, and you do not judge whether the reading is correct.
+
+  Respond with a single JSON object that follows the output schema. No text outside the JSON.
+
+user: |
+  CONSTRUCT: <<construct>>
+
+  DOCUMENT
+  <<document>>
+
+  READER OUTPUT
+  <<reader_output>>
+
+  TASK
+  Produce two things from the reader output.
+
+  1. CHARACTERIZATION: 3 to 7 claims about what this document takes <<construct>> to be: its
+     definition; its components or dimensions; the mechanism by which it operates or is produced;
+     its level of analysis; its scope; and what it is distinguished from.
+
+  2. STANCE: the document's position toward the account of <<construct>> it primarily engages.
+
+  Rules for characterization claims:
+  - One declarative sentence of at most 25 words, readable on its own without the reading or passages.
+  - Make <<construct>> the grammatical subject where possible.
+  - Use plain language. State the content about <<construct>>, not the reader's method. Do not use
+    the words premise, proposition, falsify, indicator, lineage, substitution, reading, or argument.
+  - No hedges such as "seems to" or "arguably". Leave out anything the reader marked as uncertain.
+  - Include only content present in the reader output.
+  - Characterization is not stance. "Legitimacy is a collective perception" is characterization.
+    "The document rejects the view that legitimacy is a resource" is stance.
+  - Carry over the passage IDs the reader cited for that content.
+
+  Stance labels (choose one):
+  - endorse: adopts the engaged account as formulated
+  - extend: adopts it and adds to it
+  - modify: adopts it but changes a core element
+  - contest: argues a core element is wrong, or proposes a rival account
+  - reject: argues the account should be abandoned
+  - invoke: uses <<construct>> as an explanation or label without theorizing it
+  Target: the account engaged (an author, formulation, or tradition), as the reader output shows.
+  Write "unclear" if it does not show one.
+
+  OUTPUT SCHEMA
+  {
+    "characterization": [{"id": "K1", "text": "...", "passages": ["<passage_id>"]}],
+    "stance": {"label": "endorse | extend | modify | contest | reject | invoke",
+               "target": "...", "text": "One sentence, at most 25 words.", "passages": ["<passage_id>"]}
+  }

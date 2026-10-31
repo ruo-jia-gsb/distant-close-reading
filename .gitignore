@@ -1,0 +1,6 @@
+corpus/pdfs/
+corpus/text/
+corpus/passages.jsonl
+ddr_venv/
+corpus/download_checklist.*
+__pycache__/

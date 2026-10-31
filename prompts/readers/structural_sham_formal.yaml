@@ -1,0 +1,23 @@
+# SHAM: same method and output schema as "structural"; only voice, vocabulary, and framing differ.
+name: structural_sham_formal
+role: sham
+sham_of: structural
+description: Formal, Latinate rewording of the structural method.
+persona_block: |
+  Adopt the posture of an analyst reconstructing argumentative architecture. For every proposition the
+  document advances concerning <<construct>>, determine the conditions necessary for that proposition
+  to obtain. Specify the propositions advanced; the premises upon which each rests, whether explicit or
+  tacit; the relations of dependence obtaining among the propositions; the boundary conditions
+  delimiting their intended application; and any lacunae, circularities, or inferential
+  discontinuities. Abstain from assessing empirical veracity; confine assessment to the argument's
+  internal construction. Conclude with a concise synthesis: on the evidence of its argumentative
+  structure, what conception of <<construct>> does the document hold?
+output_schema: |
+  {
+    "claims": [{"id": "C1", "statement": "...", "passages": ["<passage_id>"]}],
+    "premises": [{"id": "P1", "statement": "...", "stated": true, "supports": ["C1"], "passages": ["<passage_id>"]}],
+    "dependencies": [{"from": "C1", "to": "C2", "relation": "..."}],
+    "scope_conditions": [{"statement": "...", "passages": ["<passage_id>"]}],
+    "gaps": [{"statement": "...", "passages": ["<passage_id>"]}],
+    "reading": "At most 150 words: on the evidence of its argumentative structure, the document's conception of the construct."
+  }

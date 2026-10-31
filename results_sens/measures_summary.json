@@ -1,0 +1,72 @@
+{
+  "run_utc": "2026-10-28T16:06:23+00:00",
+  "runs": "runs_sens",
+  "embed_model": "BAAI/bge-large-en-v1.5",
+  "nli_model": "microsoft/deberta-large-mnli",
+  "k": 3,
+  "n_readings": 171,
+  "n_unique_claims": 1084,
+  "reading_level": {
+    "floor_real": {
+      "n": 171,
+      "S": 0.332166081871345,
+      "S_lo": 0.30179042397660816,
+      "S_hi": 0.36751219298245613,
+      "cosine": 0.8660660818713452,
+      "conflict_ratio": 0.6080858447663618
+    },
+    "real_vs_real": {
+      "n": 171,
+      "S": 0.22918304093567252,
+      "S_lo": 0.20092596491228068,
+      "S_hi": 0.2588279970760234,
+      "cosine": 0.8347941520467835,
+      "conflict_ratio": 0.7321783007678386
+    },
+    "dispersion_ratio_real": 1.154204568142095,
+    "pair_genealogical_operational": 0.21500877192982457,
+    "pair_genealogical_structural": 0.21064561403508772,
+    "pair_operational_structural": 0.26189473684210524,
+    "tce_floor": 0.332166081871345,
+    "tce_real": 0.22918304093567252
+  },
+  "corpus_coherence": {
+    "tce": {
+      "pairs_per_rep": 171,
+      "S": 0.024901169590643275,
+      "S_sd_reps": 0.0037709124457159684,
+      "cosine": 0.7624925925925926,
+      "conflict_ratio": 0.9718769775116524
+    },
+    "tce_spliced": {
+      "pairs_per_rep": 171,
+      "S": 0.024901169590643275,
+      "S_sd_reps": 0.0037709124457159684,
+      "cosine": 0.7624925925925926,
+      "conflict_ratio": 0.9718769775116524
+    }
+  },
+  "stance": {
+    "legitimacy": {},
+    "tce": {
+      "extend": 8,
+      "modify": 9,
+      "contest": 1,
+      "endorse": 1
+    },
+    "splice": {}
+  },
+  "editors": {},
+  "cocitation": {
+    "legitimacy": {
+      "pairs": 0,
+      "spearman": NaN,
+      "mean_coupling": null
+    },
+    "tce_all": {
+      "pairs": 170,
+      "spearman": -0.060249998473385004,
+      "mean_coupling": 0.02891902840341737
+    }
+  }
+}

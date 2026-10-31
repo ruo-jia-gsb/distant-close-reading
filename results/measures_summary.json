@@ -1,0 +1,242 @@
+{
+  "run_utc": "2026-10-26T18:39:07+00:00",
+  "runs": "runs_cc",
+  "embed_model": "BAAI/bge-large-en-v1.5",
+  "nli_model": "microsoft/deberta-large-mnli",
+  "k": 3,
+  "n_readings": 1121,
+  "n_unique_claims": 7135,
+  "reading_level": {
+    "floor_real": {
+      "n": 1394,
+      "S": 0.3246332855093257,
+      "S_lo": 0.304897070110504,
+      "S_hi": 0.34343501788268954,
+      "cosine": 0.8427301291248207,
+      "conflict_ratio": 0.6475676968340212
+    },
+    "floor_sham": {
+      "n": 840,
+      "S": 0.32327833333333333,
+      "S_lo": 0.30037806250000004,
+      "S_hi": 0.3439017857142857,
+      "cosine": 0.8452580952380953,
+      "conflict_ratio": 0.6269498265654129
+    },
+    "real_vs_real": {
+      "n": 697,
+      "S": 0.2563975609756098,
+      "S_lo": 0.23631854501190133,
+      "S_hi": 0.27668168630719525,
+      "cosine": 0.8105053084648494,
+      "conflict_ratio": 0.7434122935219425
+    },
+    "sham_vs_sham": {
+      "n": 210,
+      "S": 0.30947380952380954,
+      "S_lo": 0.28122103571428575,
+      "S_hi": 0.3368360833333333,
+      "cosine": 0.8404033333333334,
+      "conflict_ratio": 0.6588413197912351
+    },
+    "sham_vs_structural": {
+      "n": 420,
+      "S": 0.3186385714285714,
+      "S_lo": 0.2934651369047619,
+      "S_hi": 0.3419300892857143,
+      "cosine": 0.8432866666666667,
+      "conflict_ratio": 0.6444570902680846
+    },
+    "sham_vs_other_real": {
+      "n": 832,
+      "S": 0.25701814903846154,
+      "S_lo": 0.23625216186173265,
+      "S_hi": 0.2781179363568822,
+      "cosine": 0.8129849759615383,
+      "conflict_ratio": 0.7369556708384547
+    },
+    "dispersion_ratio_real": 1.101035071864884,
+    "dispersion_ratio_sham": 1.022446288305678,
+    "pair_genealogical_operational": 0.23770043290043288,
+    "pair_genealogical_structural": 0.250788085106383,
+    "pair_operational_structural": 0.2808012987012987,
+    "legitimacy_floor": 0.33816578171091444,
+    "legitimacy_real": 0.27036814159292033,
+    "tce_floor": 0.3010745583038869,
+    "tce_real": 0.2301625441696113,
+    "splice_floor": 0.3523613333333333,
+    "splice_real": 0.292244
+  },
+  "corpus_coherence": {
+    "legitimacy": {
+      "pairs_per_rep": 253,
+      "S": 0.0720498814229249,
+      "S_sd_reps": 0.0028098255103893187,
+      "cosine": 0.7199347826086956,
+      "conflict_ratio": 0.9276718943598229
+    },
+    "tce": {
+      "pairs_per_rep": 171,
+      "S": 0.01665134502923977,
+      "S_sd_reps": 0.0036722656339033834,
+      "cosine": 0.7249080701754386,
+      "conflict_ratio": 0.9742862707345549
+    },
+    "tce_spliced": {
+      "pairs_per_rep": 276,
+      "S": -0.003723478260869565,
+      "S_sd_reps": 0.004168610784004068,
+      "cosine": 0.7135013768115943,
+      "conflict_ratio": 0.9826947053498024
+    },
+    "spliced pairs only (tce+splice)": {
+      "pairs_per_rep": 95,
+      "S": -0.04523284210526316,
+      "S_sd_reps": 0.005286932760743266,
+      "cosine": 0.6920366315789473,
+      "conflict_ratio": 0.998344979798866
+    },
+    "splice+splice": {
+      "pairs_per_rep": 10,
+      "S": 0.042206,
+      "S_sd_reps": 0.008956701625040328,
+      "cosine": 0.7223620000000001,
+      "conflict_ratio": 0.9777014652014653
+    }
+  },
+  "stance": {
+    "legitimacy": {
+      "modify": 18,
+      "extend": 5
+    },
+    "tce": {
+      "modify": 7,
+      "extend": 9,
+      "endorse": 1,
+      "contest": 2
+    },
+    "splice": {
+      "extend": 2,
+      "modify": 3
+    }
+  },
+  "editors": {
+    "adversarial|legitimacy": {
+      "judgments": {
+        "coherent_contestation": 5
+      },
+      "positions_mean": 5.4,
+      "positions_sd": 0.4898979485566356,
+      "drivers": {
+        "substantive": 18,
+        "terminological": 0,
+        "method": 0,
+        "scope": 10,
+        "unclear": 0
+      }
+    },
+    "adversarial|tce": {
+      "judgments": {
+        "coherent_contestation": 5
+      },
+      "positions_mean": 5.0,
+      "positions_sd": 0.0,
+      "drivers": {
+        "substantive": 20,
+        "terminological": 3,
+        "method": 0,
+        "scope": 5,
+        "unclear": 0
+      }
+    },
+    "adversarial|tce_spliced": {
+      "judgments": {
+        "coherent_contestation": 5
+      },
+      "positions_mean": 6.2,
+      "positions_sd": 0.7483314773547882,
+      "drivers": {
+        "substantive": 18,
+        "terminological": 2,
+        "method": 1,
+        "scope": 8,
+        "unclear": 0
+      }
+    },
+    "synthesizing|legitimacy": {
+      "judgments": {
+        "coherent_contestation": 4,
+        "settled": 1
+      },
+      "positions_mean": 3.2,
+      "positions_sd": 1.8330302779823358,
+      "drivers": {
+        "substantive": 8,
+        "terminological": 1,
+        "method": 0,
+        "scope": 4,
+        "unclear": 2
+      }
+    },
+    "synthesizing|tce": {
+      "judgments": {
+        "coherent_contestation": 5
+      },
+      "positions_mean": 5.2,
+      "positions_sd": 0.39999999999999997,
+      "drivers": {
+        "substantive": 15,
+        "terminological": 4,
+        "method": 0,
+        "scope": 7,
+        "unclear": 0
+      }
+    },
+    "synthesizing|tce_spliced": {
+      "judgments": {
+        "coherent_contestation": 5
+      },
+      "positions_mean": 5.6,
+      "positions_sd": 0.48989794855663565,
+      "drivers": {
+        "substantive": 17,
+        "terminological": 1,
+        "method": 0,
+        "scope": 8,
+        "unclear": 0
+      }
+    },
+    "floor|adversarial|legitimacy": {
+      "runs": 4,
+      "agreement": 1.0,
+      "positions_sd": 0.4330127018922193
+    },
+    "floor|adversarial|tce": {
+      "runs": 4,
+      "agreement": 1.0,
+      "positions_sd": 0.4330127018922193
+    },
+    "floor|synthesizing|legitimacy": {
+      "runs": 4,
+      "agreement": 1.0,
+      "positions_sd": 0.4330127018922193
+    },
+    "floor|synthesizing|tce": {
+      "runs": 4,
+      "agreement": 1.0,
+      "positions_sd": 0.4330127018922193
+    }
+  },
+  "cocitation": {
+    "legitimacy": {
+      "pairs": 253,
+      "spearman": 0.4320779072576403,
+      "mean_coupling": 0.045209113977047674
+    },
+    "tce_all": {
+      "pairs": 275,
+      "spearman": 0.2587057499783619,
+      "mean_coupling": 0.022709025159415756
+    }
+  }
+}

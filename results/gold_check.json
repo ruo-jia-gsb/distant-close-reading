@@ -1,0 +1,19 @@
+{
+  "run_utc": "2026-10-26T01:01:20+00:00",
+  "pairs_file": "prompts/gold_pairs.yaml",
+  "n_pairs": 15,
+  "n_opposed": 7,
+  "n_equivalent": 8,
+  "embed_model": "BAAI/bge-large-en-v1.5",
+  "nli_model": "microsoft/deberta-large-mnli",
+  "versions": {
+    "sentence_transformers": "6.2.0",
+    "transformers": "5.20.2",
+    "torch": "2.14.1+cu126"
+  },
+  "threshold": 0.8,
+  "cosine_auc": 0.179,
+  "nli_auc": 1.0,
+  "nli_label_accuracy": 0.933,
+  "verdict": "NLI SEPARATES, COSINE DOES NOT: use NLI as the primary measure; report cosine's failure as evidence that word overlap does not track theoretical agreement."
+}

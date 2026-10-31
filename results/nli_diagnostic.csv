@@ -1,0 +1,11 @@
+id,construct,p_entail,p_neutral,p_contradict,label,contradiction_over_half
+C1,legitimacy,0.0115,0.5593,0.4292,neutral,False
+C2,legitimacy,0.0134,0.9822,0.0044,neutral,False
+C3,legitimacy,0.0334,0.9575,0.0091,neutral,False
+C4,legitimacy,0.0086,0.3268,0.6646,contradict,True
+C5,legitimacy,0.0041,0.9948,0.0011,neutral,False
+C6,governance,0.0033,0.9349,0.0618,neutral,False
+C7,governance,0.0067,0.41,0.5833,contradict,True
+C8,governance,0.0321,0.9045,0.0634,neutral,False
+C9,governance,0.0025,0.936,0.0615,neutral,False
+C10,governance,0.2777,0.5852,0.1371,neutral,False

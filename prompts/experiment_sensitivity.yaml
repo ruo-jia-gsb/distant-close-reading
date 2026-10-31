@@ -1,0 +1,36 @@
+# Construct-sensitivity check (added 2026-10-26, AFTER the main run; committed BEFORE this check runs).
+# Question: does TCE's low coherence depend on asking readers about "governance"?
+# Identical to experiment.yaml except: TCE construct term, TCE documents only, real readers only,
+# 3 repetitions, no editors. All prompts, models and settings are unchanged.
+#
+# PREDICTIONS (written before running):
+#   If the fragmentation is an artifact of the term "governance", TCE between-document coherence
+#   under "transaction cost economics" will rise substantially toward legitimacy's 0.072.
+#   If it reflects how the literature uses TCE, it will stay near the main-run value of 0.017.
+#   Either result is reported.
+version: 1-sensitivity
+
+models:
+  readers:    {provider: anthropic, model: claude-sonnet-5-5, temperature: 1.0, max_tokens: 4000}
+  extraction: {provider: anthropic, model: claude-sonnet-5-5, temperature: 0.0, max_tokens: 2000}
+  editors:    {provider: anthropic, model: claude-sonnet-5-5, temperature: 1.0, max_tokens: 8000}
+
+corpora:
+  legitimacy:  {documents: [corpus/legitimacy_selected.csv], construct: legitimacy}
+  tce:         {documents: [corpus/tce_selected.csv], construct: transaction cost economics}
+  tce_spliced: {documents: [corpus/tce_selected.csv, corpus/splice_selected.csv], construct: transaction cost economics}
+
+readers:
+  real: [structural, operational, genealogical]
+  sham: [structural_sham_plain, structural_sham_formal]
+
+editors: [synthesizing, adversarial]
+
+runs:
+  reading:
+    real:  {documents: [tce], repetitions: 3}      # 19 docs x 3 readers x 3 = 171 readings
+    sham:  {documents: [], repetitions: 0}
+  extraction: every reader output, once
+  editing:
+    main:  {corpora: [], editors: [], reader_repetitions: []}
+    editor_noise_floor: {corpora: [], editors: [], reader_repetition: 1, repetitions: 0}
