@@ -94,4 +94,4 @@ One model family under default sampling; NLI occasionally reads contrasting sibl
 
 ## License
 
-[Choose before release, e.g., MIT for code and CC BY 4.0 for derived data.]
+Code: MIT (see LICENSE). Derived data (claims, judgments and measures): CC BY 4.0.
